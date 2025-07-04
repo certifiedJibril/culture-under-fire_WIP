@@ -97,6 +97,72 @@ npm run dev
 
 ---
 
+## Tools & Services Used
+
+### Insomnia (API Testing)
+
+* Used during development to test backend API endpoints (`GET`, `POST` requests).
+* Helps verify data creation and retrieval without frontend.
+* Useful for debugging and manual API interaction.
+
+---
+
+### PostgreSQL Database (Neon)
+
+* Hosted on [Neon](https://neon.tech), a managed PostgreSQL cloud provider.
+* Stores cultural site data securely and reliably.
+* Connected to backend via Prisma ORM.
+
+---
+
+### Prisma ORM
+
+* Handles database schema and queries in the backend Node.js server.
+* Simplifies working with PostgreSQL data models and migrations.
+
+---
+
+### Mapbox GL JS
+
+* Provides the interactive map rendering on the frontend React app.
+* Requires a Mapbox access token to load maps and tiles.
+
+---
+
+### React + Vite
+
+* Frontend UI framework and build tool.
+* Fast dev server and optimized production builds.
+
+---
+
+### Cloudinary (Future/Optional)
+
+* Planned for image hosting and uploads for cultural site photos.
+
+---
+
+### Environment & Config
+
+* Backend `.env` holds sensitive info: database connection URL, server port.
+* Frontend currently hardcodes Mapbox token but should move to environment variables in production.
+
+---
+
+### Summary
+
+| Service/Tool | Purpose                                         |
+| ------------ | ----------------------------------------------- |
+| Insomnia     | API endpoint testing & debugging                |
+| Neon         | PostgreSQL database hosting                     |
+| Prisma       | ORM for database interaction                    |
+| Mapbox GL JS | Interactive mapping on frontend                 |
+| React + Vite | Frontend UI framework & build tooling           |
+| Cloudinary   | (Planned) Image storage and management          |
+| Firebase     | (Optional) Frontend hosting & backend functions |
+
+---
+
 ## Important Notes for Deployment
 
 * Both backend and frontend are **separate servers** that must run concurrently or be deployed separately.
