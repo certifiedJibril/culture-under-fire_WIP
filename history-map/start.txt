@@ -1,0 +1,4 @@
+
+# Terminal 2 (frontend)
+cd history-map
+npm run dev

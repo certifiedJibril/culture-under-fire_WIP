@@ -4,10 +4,14 @@ export default function Navbar() {
   return (
     <nav style={navStyle}>
       <div style={containerStyle}>
-        <div style={brandStyle}>History Under Fire</div>
-        <div style={optionsStyle}>
-          <button disabled style={btnStyle}>Option 1</button>
-          <button disabled style={btnStyle}>Option 2</button>
+        <h1 style={titleStyle}>Culture Under Fire Project</h1>
+        <div style={buttonsContainer}>
+          <button style={btnStyle} onClick={() => alert('Support page coming soon!')}>
+            Support
+          </button>
+          <button style={btnStyle} onClick={() => alert('This project documents endangered cultural sites in Ukraine.')}>
+            What is this project
+          </button>
         </div>
       </div>
     </nav>
@@ -15,44 +19,54 @@ export default function Navbar() {
 }
 
 const navStyle = {
-  backgroundColor: '#0d6efd',
-  padding: '0.5rem 1rem',
-  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-  color: 'white',
+  backgroundColor: '#fff',
+  borderBottom: '1px solid #ddd',
+  padding: '1rem 2rem',
   position: 'fixed',
-  width: '100%',
   top: 0,
+  width: '100%',
   zIndex: 1000,
+  boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+  fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
 };
 
 const containerStyle = {
   maxWidth: '1200px',
   margin: '0 auto',
   display: 'flex',
-  alignItems: 'center',
   justifyContent: 'space-between',
+  alignItems: 'center',
+  flexWrap: 'wrap', // allow wrapping to prevent overflow
+  gap: '1rem',
 };
 
-const brandStyle = {
-  fontWeight: '600',
-  fontSize: '1.25rem',
-  userSelect: 'none',
+const titleStyle = {
+  margin: 0,
+  fontSize: '1.9rem',
+  fontWeight: '700',
+  color: '#333',
+  flex: '1 1 auto',
+  minWidth: 0,
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 };
 
-const optionsStyle = {
+const buttonsContainer = {
   display: 'flex',
-  gap: '0.75rem',
+  gap: '1rem',
+  flexShrink: 0,
 };
 
 const btnStyle = {
-  backgroundColor: 'rgba(255, 255, 255, 0.2)',
+  backgroundColor: '#0d6efd',
   border: 'none',
-  padding: '0.375rem 0.75rem',
+  padding: '0.6rem 1.2rem',
   color: 'white',
+  fontSize: '1rem',
   borderRadius: '0.375rem',
-  cursor: 'not-allowed',
-  fontSize: '0.9rem',
-  transition: 'background-color 0.2s ease',
-  userSelect: 'none',
+  cursor: 'pointer',
+  fontWeight: '600',
+  boxShadow: '0 2px 4px rgba(0,123,255,0.4)',
+  whiteSpace: 'nowrap',
 };
-
