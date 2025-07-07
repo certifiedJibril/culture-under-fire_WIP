@@ -1,0 +1,144 @@
+[debug] [2025-07-07T16:50:07.483Z] ----------------------------------------------------------------------
+[debug] [2025-07-07T16:50:07.491Z] Command:       /Users/gabrielebarra/.nvm/versions/node/v22.17.0/bin/node /Users/gabrielebarra/.nvm/versions/node/v22.17.0/bin/firebase init
+[debug] [2025-07-07T16:50:07.492Z] CLI Version:   14.9.0
+[debug] [2025-07-07T16:50:07.492Z] Platform:      darwin
+[debug] [2025-07-07T16:50:07.492Z] Node Version:  v22.17.0
+[debug] [2025-07-07T16:50:07.493Z] Time:          Mon Jul 07 2025 18:50:07 GMT+0200 (Ora legale dell’Europa centrale)
+[debug] [2025-07-07T16:50:07.493Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-07T16:50:07.497Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-07-07T16:50:07.581Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-07T16:50:07.581Z] > authorizing via signed-in user (896066@stud.unive.it)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/gabrielebarra/Desktop/culture-under-fire_WIP/history-under-fire
+
+[debug] [2025-07-07T16:50:08.092Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-07-07T16:50:08.093Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-07-07T16:52:41.278Z] Checked if tokens are valid: false, expires at: 1751217518507
+[debug] [2025-07-07T16:52:41.279Z] Checked if tokens are valid: false, expires at: 1751217518507
+[debug] [2025-07-07T16:52:41.279Z] > refreshing access token with scopes: []
+[debug] [2025-07-07T16:52:41.282Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-07-07T16:52:41.282Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-07T16:52:42.685Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-07-07T16:52:42.685Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-07T16:52:42.727Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-07-07T16:52:42.727Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"culture_under_fire"}
+[debug] [2025-07-07T16:52:42.983Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2025-07-07T16:52:42.983Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2025-07-07T16:52:42.985Z] Couldn't check if project ID culture_under_fire is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2025-07-07T16:52:51.147Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:52:51.147Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:52:51.147Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-07-07T16:52:51.147Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"culture_under_fire","name":"Culture Under Fire Project"}
+[debug] [2025-07-07T16:52:52.130Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2025-07-07T16:52:52.130Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2025-07-07T16:52:52.346Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/Users/gabrielebarra/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/Users/gabrielebarra/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2025-07-07T16:57:59.776Z] ----------------------------------------------------------------------
+[debug] [2025-07-07T16:57:59.794Z] Command:       /Users/gabrielebarra/.nvm/versions/node/v22.17.0/bin/node /Users/gabrielebarra/.nvm/versions/node/v22.17.0/bin/firebase init
+[debug] [2025-07-07T16:57:59.794Z] CLI Version:   14.9.0
+[debug] [2025-07-07T16:57:59.795Z] Platform:      darwin
+[debug] [2025-07-07T16:57:59.795Z] Node Version:  v22.17.0
+[debug] [2025-07-07T16:57:59.796Z] Time:          Mon Jul 07 2025 18:57:59 GMT+0200 (Ora legale dell’Europa centrale)
+[debug] [2025-07-07T16:57:59.796Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-07T16:57:59.808Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-07T16:57:59.808Z] > authorizing via signed-in user (896066@stud.unive.it)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/gabrielebarra/Desktop/culture-under-fire_WIP/history-under-fire
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-07-07T16:58:15.572Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:15.572Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:15.575Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-07-07T16:58:16.614Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-07-07T16:58:16.614Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project culture-under-fire (Culture Under Fire) 
+[info] 
+=== Functions Setup
+[debug] [2025-07-07T16:58:20.043Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-07T16:58:20.044Z] > authorizing via signed-in user (896066@stud.unive.it)
+[debug] [2025-07-07T16:58:20.044Z] [iam] checking project culture-under-fire for permissions ["firebase.projects.get"]
+[debug] [2025-07-07T16:58:20.045Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:20.045Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:20.045Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/culture-under-fire:testIamPermissions [none]
+[debug] [2025-07-07T16:58:20.046Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/culture-under-fire:testIamPermissions x-goog-quota-user=projects/culture-under-fire
+[debug] [2025-07-07T16:58:20.046Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/culture-under-fire:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-07-07T16:58:21.085Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/culture-under-fire:testIamPermissions 200
+[debug] [2025-07-07T16:58:21.086Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/culture-under-fire:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-07-07T16:58:21.087Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:21.087Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:21.087Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:21.087Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:21.087Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-07-07T16:58:21.087Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/culture-under-fire
+[debug] [2025-07-07T16:58:21.089Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-07-07T16:58:21.089Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/culture-under-fire
+[debug] [2025-07-07T16:58:22.224Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com 200
+[debug] [2025-07-07T16:58:22.225Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-07-07T16:58:22.226Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:22.226Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T16:58:22.226Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2025-07-07T16:58:22.227Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/culture-under-fire
+[debug] [2025-07-07T16:58:22.232Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/runtimeconfig.googleapis.com 200
+[debug] [2025-07-07T16:58:22.233Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-07-07T16:58:23.163Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2025-07-07T16:58:23.164Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/culture-under-fire/services/cloudfunctions.googleapis.com:enable [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2025-07-07T17:02:42.367Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T17:02:42.367Z] Checked if tokens are valid: true, expires at: 1751910761685
+[debug] [2025-07-07T17:02:42.367Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/culture-under-fire [none]
+[debug] [2025-07-07T17:02:43.023Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/culture-under-fire 200
+[debug] [2025-07-07T17:02:43.024Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/culture-under-fire {"projectId":"culture-under-fire","projectNumber":"852872017856","displayName":"Culture Under Fire","name":"projects/culture-under-fire","resources":{"hostingSite":"culture-under-fire"},"state":"ACTIVE","etag":"1_6c53ab79-2e05-48a9-9c6c-7e74d8b9de39"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
