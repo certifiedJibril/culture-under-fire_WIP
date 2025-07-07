@@ -1,0 +1,3 @@
+# Terminal 1 (backend)
+cd history-under-fire
+node server.js
