@@ -1,4 +1,4 @@
-// Dati statici con tutti gli 8 siti reali dal database Neon
+// Dati statici per il frontend (fallback se il backend non è disponibile)
 export const staticSites = [
   {
     id: "1",
@@ -54,38 +54,5 @@ export const staticSites = [
     status: "DAMAGED",
     type: "CHURCH",
     bibliography: "Cattedrale Trasfigurazione, Danni riportati marzo 2022"
-  },
-  {
-    id: "6",
-    name: "Museo di Storia Locale di Chernihiv",
-    description: "Museo con reperti archeologici e storici, danneggiato dai bombardamenti",
-    location: "Chernihiv, Ucraina",
-    latitude: 51.4982,
-    longitude: 31.2893,
-    status: "DAMAGED",
-    type: "MUSEUM",
-    bibliography: "Museo Chernihiv, Report danni febbraio 2022"
-  },
-  {
-    id: "7",
-    name: "Teatro dell'Opera di Odessa",
-    description: "Teatro storico del XIX secolo, evacuato preventivamente",
-    location: "Odessa, Ucraina",
-    latitude: 46.4825,
-    longitude: 30.7233,
-    status: "INTACT",
-    type: "THEATER",
-    bibliography: "Teatro Odessa, Piano di protezione 2022"
-  },
-  {
-    id: "8",
-    name: "Museo di Arte Contemporanea di Kharkiv",
-    description: "Museo con collezioni di arte moderna ucraina, gravemente danneggiato",
-    location: "Kharkiv, Ucraina",
-    latitude: 49.9935,
-    longitude: 36.2304,
-    status: "DAMAGED",
-    type: "MUSEUM",
-    bibliography: "Museo Kharkiv, Report danni marzo 2022"
   }
 ]; 

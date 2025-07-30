@@ -43,8 +43,14 @@ export default function MapView() {
 
     map.current.addControl(new mapboxgl.NavigationControl());
 
-    // Usa i dati statici (8 siti reali)
-    setSites(staticSites);
+    // Prova prima l'API, se fallisce usa i dati statici
+    fetch('/api/sites')
+      .then(res => res.json())
+      .then(data => setSites(data))
+      .catch(() => {
+        console.log('API non disponibile, usando dati statici');
+        setSites(staticSites);
+      });
   }, []);
 
   useEffect(() => {

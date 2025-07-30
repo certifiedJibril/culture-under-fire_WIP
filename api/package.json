@@ -1,0 +1,7 @@
+{
+  "name": "culture-under-fire-api",
+  "version": "1.0.0",
+  "dependencies": {
+    "@prisma/client": "^6.13.0"
+  }
+} 
