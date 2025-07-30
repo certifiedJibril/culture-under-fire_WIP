@@ -43,12 +43,15 @@ export default function MapView() {
 
     map.current.addControl(new mapboxgl.NavigationControl());
 
-    // Prova prima l'API, se fallisce usa i dati statici
+    // Usa l'API di Vercel che si collega a Neon
     fetch('/api/sites')
       .then(res => res.json())
-      .then(data => setSites(data))
-      .catch(() => {
-        console.log('API non disponibile, usando dati statici');
+      .then(data => {
+        console.log('Dati da Neon:', data);
+        setSites(data);
+      })
+      .catch((error) => {
+        console.log('API non disponibile, usando dati statici:', error);
         setSites(staticSites);
       });
   }, []);
