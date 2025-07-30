@@ -7,15 +7,6 @@
       "config": {
         "distDir": "dist"
       }
-    },
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
     }
-  ],
-  "functions": {
-    "api/sites.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 } 
