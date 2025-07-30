@@ -1,9 +1,0 @@
-{
-  "name": "culture-under-fire",
-  "version": "1.0.0",
-  "description": "Interactive map of Ukrainian cultural sites in danger",
-  "scripts": {
-    "build": "cd frontend && npm run build",
-    "dev": "cd frontend && npm run dev"
-  }
-} 
