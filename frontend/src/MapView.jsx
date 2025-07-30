@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import Navbar from './Navbar';
 import Legend from './Legend';
+import { staticSites } from './data';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoib2ZmaWNpYWxqaWJyaWwiLCJhIjoiY21jcDI3am5qMDF3cjJpczRrOWR5bmY3bSJ9.ur_FGCaTKtXKCnDNbgD8oA';
 
@@ -42,10 +43,14 @@ export default function MapView() {
 
     map.current.addControl(new mapboxgl.NavigationControl());
 
-    fetch('http://localhost:4000/api/sites')
+    // Prova prima l'API, se fallisce usa i dati statici
+    fetch('/api/sites')
       .then(res => res.json())
       .then(data => setSites(data))
-      .catch(console.error);
+      .catch(() => {
+        console.log('API non disponibile, usando dati statici');
+        setSites(staticSites);
+      });
   }, []);
 
   useEffect(() => {
