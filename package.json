@@ -5,11 +5,5 @@
   "scripts": {
     "build": "cd frontend && npm run build",
     "dev": "cd frontend && npm run dev"
-  },
-  "dependencies": {
-    "@prisma/client": "^6.13.0"
-  },
-  "devDependencies": {
-    "prisma": "^6.13.0"
   }
 } 
